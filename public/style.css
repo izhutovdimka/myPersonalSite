@@ -1,0 +1,28 @@
+body {
+	background: url("../images/fon.jpg");
+	background-position: center;
+	background-size: cover;
+}
+#content {
+	width: 500px;
+	height: 300px;
+	margin: 20px auto;
+	border: 1px solid #999;
+	border-radius: 7px;
+	overflow-y: scroll;
+	background-color: white;
+	
+}
+form {
+	width: 500px;
+	margin: auto;
+}
+form #field {
+	width: 400px;
+	height: 24px;
+	margin-right: 20px; 
+}
+form #send {
+	width: 70px;
+	height: 30px;
+}
