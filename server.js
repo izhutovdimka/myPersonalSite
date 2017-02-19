@@ -45,6 +45,10 @@ var dataUSER = [{
  {
  	login: "4morila",
  	password: "maxxxx"
+ },
+ {
+ 	login: "test",
+ 	password: "987654321"
  }];
 
 //для формы входа
