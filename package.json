@@ -8,5 +8,8 @@
 		"jade" : "latest",
 		"socket.io-client" : "latest"
 	},
+	"scripts": {
+		"start": "node server.js"
+	},
 	"author" : "Dmitry Izhutov"
 }

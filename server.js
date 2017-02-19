@@ -43,8 +43,8 @@ var dataUSER = [{
     password: "komi"
  },
  {
- 	login: "alina",
- 	password:"love"
+ 	login: "4morila",
+ 	password: "maxxxx"
  }];
 
 app.post("/sign/user", jsonParser, function(req,res){
