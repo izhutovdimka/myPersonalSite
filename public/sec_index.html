@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign up</title>
+	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+<div class="reg-form">
+	<form name="regForm">
+		<label for="login">Login: </label>
+		<input type="text" name="login"><br>
+		<label for="password">Password: </label>
+		<input type="password" name="psw">
+		<br>
+		<button type="submit">Submit</button>
+	</form>
+
+</div>
+
+<div class="a-class">
+	<a href="http://localhost:7000/chat">Перейти в чат</a>
+	<a href="http://localhost:7000/books">Библиотека</a>
+</div>
+	<script type="text/javascript">
+		//ajax отправка
+		function tost(login, password){
+			$.ajax({
+				url:"sign/user",
+				contentType: "application/json",
+				method: "POST",
+				data: JSON.stringify({
+					login: login,
+					password: password
+				}),
+				success: function(user){
+					reset();
+					console.log(user);
+				}
+			});
+		}
+		//отправка формы
+		$("form").submit(function(e){
+			e.preventDefault();
+            var login = this.elements["login"].value;
+            var password = this.elements["psw"].value;
+            tost(login, password);
+		});
+
+		function reset(){
+			var form = document.forms["regForm"];
+			var login = form.elements["login"].value = 0;
+            var password = form.elements["psw"].value = 0;
+		}
+	</script>
+</body>
+</html>
