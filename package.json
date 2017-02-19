@@ -1,0 +1,12 @@
+{
+	"name" : "Tost",
+	"version" : "1.0.0",
+	"description" : "tost-test",
+	"dependencies" : {
+		"socket.io" : "latest",
+		"express" : "latest",
+		"jade" : "latest",
+		"socket.io-client" : "latest"
+	},
+	"author" : "Dmitry Izhutov"
+}
