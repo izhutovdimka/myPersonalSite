@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='CSS_reset.css')
+    link(rel='stylesheet', href='books.css')
+    title Books Library
+  body
+    header
+      h1.page-title Dmitry Izhutov
+
+    ul.nav
+      li: a(href='/') Home
+      li: a(href='#news') News
+      li: a(href='#about') About
+      li: a(href='#contact') Contact
+    
+    .main-content
+      p Список доступной литературы
+      div.books-link
+        a(href='/data-books/it.pdf') Оно - Сивен Кинг
+
+    footer
+      p Copyright © 2016 Dmitry Izhutov
