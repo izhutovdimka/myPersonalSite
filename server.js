@@ -16,8 +16,8 @@ app.get("/", function(req, res){
 	res.sendFile("index.html");
 });
 
-var io = socket.listen(app.listen(7000, function(){
-	console.log("Server listen...");
+var io = socket.listen(app.listen(process.env.PORT || 7000, function(){
+	console.log("Server listen on localhost:7000");
 }));
 //выдача книг
 booksRouter.route("/it.pdf").get(function(req, res){
@@ -47,6 +47,7 @@ var dataUSER = [{
  	password: "maxxxx"
  }];
 
+//для формы входа
 app.post("/sign/user", jsonParser, function(req,res){
 	if (!req.body)
 		return res.sendStatus(400);
@@ -69,9 +70,11 @@ app.post("/sign/user", jsonParser, function(req,res){
 app.get("/chat", function(req, res){
 	res.render("page");
 });
+app.get("/no", function(req, res){
+	res.send('Cервис в данный момент не обслуживается');
+});
 
 var users = {};
-
 
 function getUsers(obj){
 	var tmp = [];
